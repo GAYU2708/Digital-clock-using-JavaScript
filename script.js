@@ -31,11 +31,11 @@ setInterval(() =>{
         seconds.innerHTML = s + '<br>Seconds';
         ampm.innerHTML    = ap;
 
-        hrs.style.strokeDashoffset = 440 - (440*h) /12;
+        hrs.style.strokeDashoffset = 440 - (440*h) /12;// 440 is a constant value of total length or distance of dashpattern
         min.style.strokeDashoffset = 440 - (440*m) /60;
         sec.style.strokeDashoffset = 440 - (440*s) /60;
 
-        dotH.style.transform = `rotate($(h * 30)deg)`;
-        dotM.style.transform = `rotate($(m * 6)deg)`;
-        dotS.style.transform = `rotate($(s * 6)deg)`;
+        dotH.style.transform = `rotate($(h * 30)deg)`;// in a clock each hour is represented by 30 deg . 360deg/12 hours=30
+        dotM.style.transform = `rotate($(m * 6)deg)`;// in a clock each min is represented by 6 deg . 360deg/60 min==6
+        dotS.style.transform = `rotate($(s * 6)deg)`;// in a clock each sec is represented by 6 deg. 360 deg /60 sec==6
 },1000);
